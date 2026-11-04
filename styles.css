@@ -79,6 +79,8 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
   border: 1px dashed var(--golden-sand);
 }
 
+.photo { width: 100%; object-fit: cover; border-radius: var(--radius); background: var(--deep-midnight); }
+
 /* Header */
 .header {
   position: fixed; inset: 0 0 auto; z-index: 50;
@@ -106,7 +108,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
 
 /* Hero */
 .hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); padding-bottom: 40px; }
-.hero__bg { position: absolute; inset: 0; border-radius: 0; }
+.hero__bg { position: absolute; inset: 0; height: 100%; border-radius: 0; object-position: 75% center; }
 .hero__bg.placeholder[data-label]::after { left: 16px; right: auto; top: auto; bottom: 8px; transform: none; z-index: 1; max-width: calc(100% - 32px); }
 .hero__overlay {
   position: absolute; inset: 0; pointer-events: none;
@@ -142,7 +144,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
 /* Serviços */
 .services__grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 56px; align-items: start; }
 .services__intro p { color: var(--muted); margin-bottom: 26px; }
-.services__img { height: 260px; margin-top: 36px; }
+.services__img { height: 320px; margin-top: 36px; object-position: center 40%; }
 .services__lists { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .card-list {
   background: var(--white); border-radius: var(--radius); padding: 30px;
@@ -183,7 +185,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
   border-radius: 50%; font-size: .75rem; font-weight: 700;
   background: var(--azure-crest); color: var(--white);
 }
-.why__img { height: 520px; }
+.why__img { height: 520px; object-position: center 45%; }
 
 /* Tecnologia */
 .tech { background: linear-gradient(180deg, var(--deep-midnight), var(--shadow-abyss)); color: var(--white); }
@@ -196,7 +198,24 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
   transition: transform .25s, border-color .25s;
 }
 .tcard:hover { transform: translateY(-6px); border-color: var(--amber-blaze); }
-.tcard__img { height: 200px; margin-bottom: 22px; }
+.tcard__img { height: 200px; margin-bottom: 22px; border-radius: var(--radius); overflow: hidden; position: relative; }
+.tcard__media .photo {
+  height: 100%; border-radius: 0; object-position: center 62%;
+  filter: brightness(1.08) contrast(1.1) saturate(1.15);
+  transition: transform .5s;
+}
+.tcard__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(14,32,67,0) 45%, rgba(14,32,67,.75) 100%);
+}
+.tcard__tag {
+  position: absolute; left: 12px; bottom: 12px; z-index: 1;
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--amber-blaze); color: var(--shadow-abyss);
+  font-size: .75rem; font-weight: 700;
+}
+.tcard__art svg { display: block; width: 100%; height: 100%; transition: transform .5s; }
+.tcard:hover .tcard__media .photo, .tcard:hover .tcard__art svg { transform: scale(1.05); }
 .tcard h3 { color: var(--golden-sand); margin: 0 8px 8px; font-size: 1.2rem; }
 .tcard p { color: rgba(255,255,255,.75); margin: 0 8px; font-size: .95rem; }
 
@@ -207,9 +226,16 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
 .score small { display: block; color: var(--muted); }
 .reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .review { background: var(--white); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); border-top: 4px solid var(--amber-blaze); }
-.review blockquote { margin: 14px 0 22px; color: var(--muted); font-style: italic; }
-.review figcaption { display: flex; align-items: center; gap: 12px; font-weight: 600; }
-.avatar { width: 42px; height: 42px; border-radius: 50%; }
+.review { display: flex; flex-direction: column; }
+.review blockquote { margin: 14px 0 22px; color: var(--text); font-size: 1.02rem; flex: 1; }
+.review figcaption { display: flex; align-items: center; gap: 12px; font-weight: 600; line-height: 1.3; }
+.review figcaption small { display: block; font-weight: 400; font-size: .78rem; color: var(--muted); margin-top: 2px; }
+.avatar {
+  width: 44px; height: 44px; flex: none; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 700; font-size: 1.1rem;
+}
+img.avatar { object-fit: cover; }
+.avatar--purple { background: #7e57c2; color: var(--white); }
 
 /* FAQ */
 .faq { background: var(--white); }

@@ -40,7 +40,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero__bg placeholder placeholder--dark" data-label="IMAGEM: fachada / interior da oficina (foto larga, 1920×1080)"></div>
+    <img class="hero__bg photo" src="imagens/fachada-oficina.jpg" alt="Fachada da Auto Mecânica Aurélio em Campo Mourão">
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <div class="badge">
@@ -71,7 +71,7 @@
         <h2>Veículo revisado e livre de imprevistos.</h2>
         <p>Pequenos barulhos podem virar grandes prejuízos. Traga seu carro para uma avaliação e saia com tudo em dia.</p>
         <a class="btn btn--blue" href="https://wa.me/5544997607070" target="_blank" rel="noopener">Fazer orçamento</a>
-        <div class="placeholder services__img" data-label="IMAGEM: mecânico trabalhando em um veículo"></div>
+        <img class="photo services__img" src="imagens/mecanico-motor.jpg" alt="Mecânico da Aurélio trabalhando no motor de um carro" loading="lazy">
       </div>
       <div class="services__lists">
         <div class="card-list">
@@ -112,8 +112,8 @@
   <section class="section about" id="sobre">
     <div class="container about__grid">
       <div class="about__media">
-        <div class="placeholder placeholder--dark about__img-main" data-label="IMAGEM: equipe Aurélio na oficina"></div>
-        <div class="placeholder about__img-sec" data-label="IMAGEM: balcão / estoque de peças"></div>
+        <img class="photo about__img-main" src="imagens/equipe-balcao.jpg" alt="Equipe Aurélio atendendo clientes no balcão de peças" loading="lazy">
+        <img class="photo about__img-sec" src="imagens/fachada-auto-pecas.jpg" alt="Fachada da loja Auto Peças Aurélio" loading="lazy">
       </div>
       <div class="about__text">
         <span class="eyebrow eyebrow--sand">Sobre nós</span>
@@ -143,7 +143,7 @@
         </ul>
         <a class="btn btn--blue" href="https://wa.me/5544997607070" target="_blank" rel="noopener">Quero levar meu veículo</a>
       </div>
-      <div class="placeholder why__img" data-label="IMAGEM: carro no elevador sendo revisado"></div>
+      <img class="photo why__img" src="imagens/interior-oficina.jpg" alt="Interior da oficina com carros nos elevadores" loading="lazy">
     </div>
   </section>
 
@@ -157,17 +157,72 @@
       </div>
       <div class="tech__cards">
         <article class="tcard">
-          <div class="placeholder placeholder--dark tcard__img" data-label="IMAGEM: scanner automotivo conectado"></div>
+          <div class="tcard__img tcard__media">
+            <img class="photo" src="imagens/carro-elevador.jpg" alt="Carro no elevador para revisão" loading="lazy">
+            <span class="tcard__tag">Revisão completa</span>
+          </div>
           <h3>Precisão no diagnóstico</h3>
           <p>Identificamos falhas em injeção eletrônica, ABS, airbag e sistemas elétricos com equipamentos de leitura.</p>
         </article>
         <article class="tcard">
-          <div class="placeholder placeholder--dark tcard__img" data-label="IMAGEM: peças novas na embalagem"></div>
+          <div class="tcard__img tcard__art" role="img" aria-label="Ilustração de pilhas de moedas crescendo">
+            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="ecoBg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#2b3f80"/><stop offset="1" stop-color="#0e2043"/></radialGradient>
+                <g id="coin">
+                  <rect x="-30" y="0" width="60" height="11" fill="#b8841a"/>
+                  <ellipse cy="11" rx="30" ry="9" fill="#b8841a"/>
+                  <ellipse rx="30" ry="9" fill="#e8af2e" stroke="#e8c766" stroke-width="1.5"/>
+                </g>
+              </defs>
+              <rect width="400" height="200" fill="url(#ecoBg)"/>
+              <g opacity=".12" stroke="#e8c766">
+                <line x1="0" y1="60" x2="400" y2="60"/><line x1="0" y1="110" x2="400" y2="110"/><line x1="0" y1="160" x2="400" y2="160"/>
+              </g>
+              <ellipse cx="200" cy="176" rx="140" ry="12" fill="#000" opacity=".25"/>
+              <g transform="translate(125 160)"><use href="#coin"/><use href="#coin" y="-12"/></g>
+              <g transform="translate(200 160)"><use href="#coin"/><use href="#coin" y="-12"/><use href="#coin" y="-24"/><use href="#coin" y="-36"/></g>
+              <g transform="translate(275 160)"><use href="#coin"/><use href="#coin" y="-12"/><use href="#coin" y="-24"/><use href="#coin" y="-36"/><use href="#coin" y="-48"/><use href="#coin" y="-60"/></g>
+              <text x="275" y="104" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="13" fill="#0e2043">R$</text>
+              <path d="M70 120 C 140 115, 200 85, 330 38" fill="none" stroke="#e8c766" stroke-width="3" stroke-dasharray="7 7" stroke-linecap="round"/>
+              <path d="M318 32 L336 35 L328 51" fill="none" stroke="#e8c766" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <g fill="#e8c766"><circle cx="70" cy="50" r="2"/><circle cx="350" cy="120" r="2.5"/><circle cx="95" cy="30" r="1.5"/></g>
+            </svg>
+          </div>
           <h3>Economia real</h3>
           <p>Atacando a causa do problema, evitamos troca de peças desnecessárias — e você paga só pelo que precisa.</p>
         </article>
         <article class="tcard">
-          <div class="placeholder placeholder--dark tcard__img" data-label="IMAGEM: entrega do carro ao cliente"></div>
+          <div class="tcard__img tcard__art" role="img" aria-label="Ilustração de disco de freio com relógio">
+            <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <radialGradient id="pecaBg" cx="45%" cy="50%" r="75%"><stop offset="0" stop-color="#2b3f80"/><stop offset="1" stop-color="#0e2043"/></radialGradient>
+                <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3e9f5"/><stop offset=".5" stop-color="#9fb0d1"/><stop offset="1" stop-color="#5f7099"/></linearGradient>
+              </defs>
+              <rect width="400" height="200" fill="url(#pecaBg)"/>
+              <circle cx="175" cy="100" r="92" fill="none" stroke="#3462ac" stroke-width="1" opacity=".5"/>
+              <circle cx="175" cy="100" r="76" fill="url(#steel)"/>
+              <circle cx="175" cy="100" r="76" fill="none" stroke="#0e2043" stroke-width="2" opacity=".4"/>
+              <g fill="#223164">
+                <circle cx="175" cy="38" r="3.5"/><circle cx="206" cy="46.3" r="3.5"/><circle cx="228.7" cy="69" r="3.5"/><circle cx="237" cy="100" r="3.5"/><circle cx="228.7" cy="131" r="3.5"/><circle cx="206" cy="153.7" r="3.5"/><circle cx="175" cy="162" r="3.5"/><circle cx="144" cy="153.7" r="3.5"/><circle cx="121.3" cy="131" r="3.5"/><circle cx="113" cy="100" r="3.5"/><circle cx="121.3" cy="69" r="3.5"/><circle cx="144" cy="46.3" r="3.5"/>
+              </g>
+              <circle cx="175" cy="100" r="40" fill="#223164"/>
+              <circle cx="175" cy="100" r="26" fill="url(#steel)"/>
+              <g fill="#223164"><circle cx="175" cy="88" r="3.5"/><circle cx="186.4" cy="96.3" r="3.5"/><circle cx="182" cy="109.7" r="3.5"/><circle cx="168" cy="109.7" r="3.5"/><circle cx="163.6" cy="96.3" r="3.5"/></g>
+              <circle cx="175" cy="100" r="7" fill="#0e2043"/>
+              <path d="M 231 52 A 74 74 0 0 1 231 148" fill="none" stroke="#e8af2e" stroke-width="26" stroke-linecap="round"/>
+              <path d="M 231 52 A 74 74 0 0 1 231 148" fill="none" stroke="#e8c766" stroke-width="3" stroke-linecap="round" opacity=".7" transform="translate(-6 0)"/>
+              <g transform="translate(318 62)">
+                <circle r="36" fill="#3462ac" stroke="#e8c766" stroke-width="3"/>
+                <circle r="28" fill="#0e2043"/>
+                <g stroke="#e8c766" stroke-width="2" stroke-linecap="round"><line y1="-24" y2="-20"/><line x1="24" x2="20"/><line y1="24" y2="20"/><line x1="-24" x2="-20"/></g>
+                <line x1="0" y1="0" x2="0" y2="-16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                <line x1="0" y1="0" x2="12" y2="6" stroke="#e8af2e" stroke-width="3" stroke-linecap="round"/>
+                <circle r="3" fill="#fff"/>
+              </g>
+              <g fill="#e8c766"><circle cx="60" cy="40" r="2"/><circle cx="340" cy="160" r="2.5"/><circle cx="40" cy="150" r="1.5"/></g>
+            </svg>
+          </div>
           <h3>Peça certa, na hora</h3>
           <p>Com a loja de peças ao lado da oficina, seu carro fica pronto mais rápido, sem esperar fornecedor.</p>
         </article>
@@ -188,22 +243,22 @@
           <div><span class="badge__stars">★★★★★</span><small>157 avaliações no Google</small></div>
         </div>
       </div>
-      <!-- Depoimentos de exemplo: substituir por avaliações reais do Google -->
+      <!-- Avaliações reais do Google (só erros de digitação corrigidos) -->
       <div class="reviews__grid">
         <figure class="review">
           <span class="badge__stars">★★★★★</span>
-          <blockquote>Espaço reservado para uma avaliação real do Google. Substitua este texto pelo depoimento do cliente.</blockquote>
-          <figcaption><span class="avatar placeholder"></span>Nome do cliente</figcaption>
+          <blockquote>“Trabalho de qualidade, empresa familiar, colaboradores nota 1000”</blockquote>
+          <figcaption><img class="avatar" src="imagens/avatar-hygor.jpg" alt="" loading="lazy"><span>Hygor Thiago<small>Avaliação no Google · 7 meses atrás</small></span></figcaption>
         </figure>
         <figure class="review">
           <span class="badge__stars">★★★★★</span>
-          <blockquote>Espaço reservado para uma avaliação real do Google. Substitua este texto pelo depoimento do cliente.</blockquote>
-          <figcaption><span class="avatar placeholder"></span>Nome do cliente</figcaption>
+          <blockquote>“Fui muito bem atendido, eles realmente resolveram todas as minhas demandas”</blockquote>
+          <figcaption><span class="avatar avatar--purple">L</span><span>Luiz Tagliari<small>Avaliação no Google · 7 meses atrás</small></span></figcaption>
         </figure>
         <figure class="review">
           <span class="badge__stars">★★★★★</span>
-          <blockquote>Espaço reservado para uma avaliação real do Google. Substitua este texto pelo depoimento do cliente.</blockquote>
-          <figcaption><span class="avatar placeholder"></span>Nome do cliente</figcaption>
+          <blockquote>“Marco Aurélio e toda equipe muito atenciosos e com excelente serviço!!! Confia sem medo!!!”</blockquote>
+          <figcaption><img class="avatar" src="imagens/avatar-filipe.jpg" alt="" loading="lazy"><span>Filipe Coutinho de Oliveira<small>Local Guide no Google · 1 ano atrás</small></span></figcaption>
         </figure>
       </div>
       <div class="center"><a class="btn btn--amber" href="https://wa.me/5544997607070" target="_blank" rel="noopener">Quero levar meu veículo</a></div>
