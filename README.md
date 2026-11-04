@@ -61,9 +61,9 @@ O site está hospedado na [Vercel](https://vercel.com) como site estático (proj
 
 ## Pendências
 
-- [ ] **Imagens:** todas as fotos são espaços reservados (blocos listrados com uma etiqueta amarela dizendo qual foto vai ali). Basta trocar cada `<div class="placeholder" data-label="...">` por uma `<img>`.
-- [ ] **Logo:** hoje é um "A" dourado provisório.
-- [ ] **Depoimentos:** os textos são de exemplo; trocar por avaliações reais do Google.
+- [x] **Imagens:** fotos reais da loja e da oficina na pasta `imagens/`
+- [x] **Logo:** `imagens/logo.png`, também usada como ícone da aba (`imagens/favicon.png`)
+- [x] **Depoimentos:** três avaliações reais do Google
 - [ ] **Facebook:** o link ainda aponta para a página inicial do Facebook.
 
 ## Contato da empresa

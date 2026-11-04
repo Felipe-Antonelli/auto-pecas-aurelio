@@ -89,12 +89,7 @@ h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin: .4rem 0 1rem; }
 .header.is-scrolled { background: rgba(14,32,67,.96); box-shadow: 0 4px 20px rgba(0,0,0,.25); backdrop-filter: blur(8px); }
 .header__inner { display: flex; align-items: center; gap: 28px; height: 84px; }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--white); }
-.logo__mark {
-  width: 46px; height: 46px; display: grid; place-items: center;
-  border-radius: 12px; font-weight: 800; font-size: 1.4rem;
-  background: linear-gradient(135deg, var(--golden-sand), var(--amber-blaze));
-  color: var(--shadow-abyss);
-}
+.logo__mark { width: 48px; height: 48px; border-radius: 22%; }
 .logo__text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo__text strong { font-size: 1.15rem; letter-spacing: .08em; }
 .logo__text small { font-size: .72rem; color: var(--golden-sand); }
